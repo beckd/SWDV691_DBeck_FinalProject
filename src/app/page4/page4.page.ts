@@ -45,7 +45,7 @@ export class Page4Page implements OnInit {
           cssClass: 'secondary',
           handler: () => {
             console.log('This is the restart button confirmation')
-            this.userService.deleteUser(this.user['id']).subscribe(deletedUser => {
+            this.userService.deleteUser(this.user['_id']).subscribe(deletedUser => {
               console.log('Deleted user', deletedUser);
               this.navCtrl.navigateForward('tabs/tab1')
             }
