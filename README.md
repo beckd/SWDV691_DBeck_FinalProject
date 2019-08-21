@@ -1,28 +1,11 @@
 # SWDV691_DBeck_Final_Project
 David Beck's repo for SWDV691 - Final Project	David Beck's repo for SWDV691 - Final Project
 
-## 8/11/19 -- Getting Into the Groove
-The game is now semi-functional beginning to end. You can go through the game, win or lose, and see your stats change each page (in console, there is a known bug displaying them on screen I have logged on my trello board). I can know turn my attention to the three villain/boss encounters I have planned and the final page. This will probably be the bulk of my work for the coming week.
+## Link to Game:
+https://swdv691-finalproject-dbeck.herokuapp.com/
 
-## Server Code Repo:
-beckd/SWDV691_DBeck_Final_Project_Server
-* To run the server point your CLI toward the folder where it's locally stored and run the following command:
-```
-node server.js
-```
-* Note that I plan on hosting this code in Heroku and will update this ReadMe when that's set up.
-
- ## Getting the app running
-* At this phase of development you must run the app locally using Ionic. To install Ionic use the following CLI command:
-```
-npm install -g ionic
-```
-This will install Ionic globally. 
-* Download the repository locally, and navigate to the the SWDV691_DBeck_Final_Project folder in your command line interface. Once there use the following command:
-```
-ionic serve
-```
-This will run the app via localhost, it should automatically appear in your browser
+## 8/21/19 -- The Home Stretch
+The game is now fully functional and hosted entirely in the cloud via Heroku. This week's focus is on bug fixing and polish. I've had lots of successful playthroughs already, but more polish is needed. I originally had my server and app code in separate repos. But after some issues getting my app code up in the cloud, it became apparent that combining the code into a monolith structure was the best course of action. It also had the added benefit of allowing my to work through one repo and one pipeline to Heroku. The new repo listed below is the combined and final repo for this project. It did however introduce a some new bugs, most of which I believe I've addressed.
 
  ## A Text-Based Adventure
 This project will build on a previous project from all the way back in SWDV 600. In that class we built a TBA using only Python. I want to go back and revisit this project, adding to it all the things I've learned since then. I want to translate this single file game into a fully fledged game that is hosted and accessible to the public.
