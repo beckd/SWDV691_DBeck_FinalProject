@@ -184,6 +184,7 @@ export class VillainService {
   }
   async villain_2_Story1_2(user) {
     var guessNumber = Math.floor((Math.random() * 10) +1)
+    console.log('guessNumber is ', guessNumber)
     const alert = await this.alertController.create({
       header: "How insidious! You're trapped and cannot escape! You hear a laugh, a low chuckle. Out of the shadows, you see familiar yellow eyes almost grinning at you.",
       subHeader: "'You again!' You see the imp leader from the start of your journey standing before you. He's holding an odd shaped key.",
@@ -198,11 +199,12 @@ export class VillainService {
       buttons: [
         {
           text: 'Take A Guess',
-          handler: (user) => {
-            if (guessNumber == name) {
-              this.villain_2_Story_Win(user, guessNumber);
+          handler: data => {
+            console.log ('Name = ', data.guess)
+            if (guessNumber == data.guess) {
+              this.villain_2_Story_Win(guessNumber);
             } else {
-              this.villain_2_Story_Guess2(user, guessNumber)
+              this.villain_2_Story_Guess2(guessNumber)
             }
           }
         }
@@ -210,7 +212,7 @@ export class VillainService {
     });
     await alert.present();
   }
-  async villain_2_Story_Guess2(user, guessNumber) {
+  async villain_2_Story_Guess2(guessNumber) {
     const alert = await this.alertController.create({
       header: "'Nope, that's not it! 2 guesses left!",
       inputs: [
@@ -225,9 +227,9 @@ export class VillainService {
           text: 'Take A Guess',
           handler: (user) => {
             if (guessNumber == name) {
-              this.villain_2_Story_Win(user, guessNumber);
+              this.villain_2_Story_Win(guessNumber);
             } else {
-              this.villain_2_Story_Guess3(user, guessNumber)
+              this.villain_2_Story_Guess3(guessNumber)
             }
           }
         }
@@ -235,7 +237,7 @@ export class VillainService {
     });
     await alert.present();
   }
-  async villain_2_Story_Guess3(user, guessNumber) {
+  async villain_2_Story_Guess3(guessNumber) {
     const alert = await this.alertController.create({
       header: "'That's not it either! You'll never guess it! 1 guess remains!",
       inputs: [
@@ -250,9 +252,9 @@ export class VillainService {
           text: 'Take A Guess',
           handler: (user) => {
             if (guessNumber == name) {
-              this.villain_2_Story_Win(user, guessNumber);
+              this.villain_2_Story_Win(guessNumber);
             } else {
-              this.villain_2_Story_Lose(user, guessNumber)
+              this.villain_2_Story_Lose(guessNumber)
             }
           }
         }
@@ -260,7 +262,7 @@ export class VillainService {
     });
     await alert.present();
   }
-  async villain_2_Story_Win(user, guessNumber) {
+  async villain_2_Story_Win(guessNumber) {
     const alert = await this.alertController.create({
       header: "'I can't believe it! You guessed my number! That's impossible!'",
       subHeader: "'Fair is fair.' The imp begrudgingly unlocks the snare and sets you free. He sulks as he disappears once again into the shadows.",
@@ -276,7 +278,7 @@ export class VillainService {
     });
     await alert.present();
   }
-  async villain_2_Story_Lose(user, guessNumber) {
+  async villain_2_Story_Lose(guessNumber) {
     const alert = await this.alertController.create({
       header: "'I knew you'd never guess it! No one beats me at this game! Ever!",
       subHeader: "You hand over 15 Pickle Chips, and your Hunger Level goes down 10. Afterall, fair is fair. ",

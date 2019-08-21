@@ -18,8 +18,8 @@ export class WinPage implements OnInit {
   gameName = "Bread Knight: Journey for the Sandwich of Destiny - A Text Based Adventure!";
   chapter = "You Are Victorious!";
   location = "Location: Couchtopia";
-  title = "You've won the Sandwich of Destiny and Sated Your Hunger!";
-  story = "No longer hungry, you ponder what what to do with the rest of your life. What comes next after such a momentous adventure? Do you seek out other legendary meals? Afterall, dinner is just a few hours away.";
+  title = "You've won the Sandwich of Destiny and sated your hunger!";
+  story = "No longer hungry, you ponder what what to do with the rest of your life. What comes next after such a momentous adventure? Do you seek out other legendary meals? Afterall, dinner is just a few hours away...";
   async restartGame() {
     const alert = await this.alertController.create({
       header: "Play It Again!",

@@ -34,8 +34,8 @@ export class Tab1Page {
           name: 'health',
           type: 'number',
           disabled: true,
-          placeholder: '100 - Hunger Level',
-          value: 100
+          placeholder: '25 - Hunger Level',
+          value: 25
         },
         {
           name: 'currency',

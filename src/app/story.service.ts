@@ -22,7 +22,7 @@ export class StoryService {
     var storyValue = Math.floor(Math.random() * 6) + 1
     const alert = await this.alertController.create({
       // add a message for all instances of this 
-      header: "You continue onward, curious what could happent next.",
+      header: "You continue onward, curious what could happen next.",
       subHeader: "The way is fraught with danger, but also excitement.",
       message: "You come up to a bend in the road, what could be around the corner?",
       buttons: [
@@ -582,7 +582,7 @@ export class StoryService {
         {
           text: 'Make the Switch',
           handler: (user) => {
-            if (this.user['currency'] > 25) {
+            if (this.user['currency'] >= 25) {
               this.navCtrl.navigateForward('win')
             } else {
               this.navCtrl.navigateForward('lose-final-stage')
