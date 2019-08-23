@@ -25,8 +25,8 @@ export class Page7Page implements OnInit {
   title = "At long last you've reach the outer limits of Dining Roomopolis. The skyline of Kitchensburgh is just peeking out of the clouds in the distance.";
   story = "Everything is peaceful, everything is serene, you feel in control of your destiny. When suddenly... ";
 
-  villain2(user) {
-    this.villainService.villain_2_Story1(user);
+  villain2() {
+    this.villainService.villain_2_Story1();
   }
   async restartGame() {
     const alert = await this.alertController.create({

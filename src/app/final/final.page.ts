@@ -29,7 +29,7 @@ export class FinalPage implements OnInit {
   story = "You begin to climb the steps toward the Sandwich, cautiously, for who knows the traps that could be waiting for you!";
 
 
-  finalStage(user) {
+  finalStage() {
     this.storyService.finalStage() 
   }
   // Restart game button functionality

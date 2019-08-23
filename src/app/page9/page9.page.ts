@@ -30,7 +30,7 @@ export class Page9Page implements OnInit {
 
   // Now we'll send them over to the story service we're they'll have a 50/50 chance or something good versus something bad happening
   goodOrBadStoryOccurrenceHandler() {
-    this.storyService.goodOrBadStoryOccurrenceHandler(this.user, this.pageLocation) //not that we send their user data and the source page number along with them
+    this.storyService.goodOrBadStoryOccurrenceHandler(this.pageLocation) //not that we send their user data and the source page number along with them
   }
   // Restart game button functionality
   async restartGame() {

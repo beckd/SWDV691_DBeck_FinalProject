@@ -26,8 +26,8 @@ export class Page10Page implements OnInit {
   title = "On the outskirts of Kitchensburgh, where the Sandwich of Destiny is rumored to reside, you're level of excitement increases.";
   story = "At the foot of Mount Kitchensburgh, you see a bridge with jagged rocks far below. The mouth to the cave where the Sandwich is located is on the other side. When suddenly...";
 
-  villain3(user) {
-    this.villainService.villain_3_Story1(user);
+  villain3() {
+    this.villainService.villain_3_Story1();
   }
   async restartGame() {
     const alert = await this.alertController.create({

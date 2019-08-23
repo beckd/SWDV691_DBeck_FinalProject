@@ -15,7 +15,7 @@ export class StoryService {
     this.user = this.userService.user
    }
 
-  async goodOrBadStoryOccurrenceHandler(user, pageLocation) {
+  async goodOrBadStoryOccurrenceHandler(pageLocation) {
     // adding more randomness to the game!
     // alert that will give a random number that drives the user toward a Good outcome or a Bad outcome
     //Let's start by getting a random number between 1 - 6
@@ -28,7 +28,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue the Journey',
-          handler: (user) => {
+          handler: () => {
             // now direct the user toward the outcome that matches their random number 
             if (storyValue == 1) {
               this.goodOutcome1(storyValue, pageLocation);
@@ -56,7 +56,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.goodOutcome1_2(storyValue, pageLocation);
           }
         }
@@ -71,7 +71,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.outcomeHandler(storyValue, pageLocation);
           }
         }
@@ -88,7 +88,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.goodOutcome2_2(storyValue, pageLocation);
           }
         }
@@ -103,7 +103,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.goodOutcome2_3(storyValue, pageLocation);
           }
         }
@@ -118,7 +118,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.goodOutcome2_4(storyValue, pageLocation);
           }
         }
@@ -133,7 +133,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.outcomeHandler(storyValue, pageLocation);
           }
         }
@@ -150,7 +150,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.goodOutcome3_2(storyValue, pageLocation);
           }
         }
@@ -165,7 +165,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.goodOutcome3_3(storyValue, pageLocation);
           }
         }
@@ -179,7 +179,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.outcomeHandler(storyValue, pageLocation);
           }
         }
@@ -194,7 +194,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.badOutcome1_2(storyValue, pageLocation);
           }
         }
@@ -208,7 +208,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.outcomeHandler(storyValue, pageLocation);
           }
         }
@@ -223,7 +223,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.badOutcome2_2(storyValue, pageLocation);
           }
         }
@@ -238,7 +238,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.badOutcome2_3(storyValue, pageLocation);
           }
         }
@@ -253,7 +253,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.outcomeHandler(storyValue, pageLocation);
           }
         }
@@ -268,7 +268,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.badOutcome3_2(storyValue, pageLocation);
           }
         }
@@ -282,7 +282,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.badOutcome3_3(storyValue, pageLocation);
           }
         }
@@ -514,7 +514,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.finalStage_2();
           }
         }
@@ -529,7 +529,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.finalStage_3();
           }
         }
@@ -544,13 +544,13 @@ export class StoryService {
       buttons: [
         {
           text: 'Walk Away',
-          handler: (user) => {
+          handler: () => {
             this.finalStage_Walk_Away();
           }
         },
         {
           text: 'Keep Going',
-          handler: (user) => {
+          handler: () => {
             this.finalStage_Keep_Going();
           }
         }
@@ -565,7 +565,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Continue',
-          handler: (user) => {
+          handler: () => {
             this.navCtrl.navigateForward('lose-opt-out');
           }
         }
@@ -581,7 +581,7 @@ export class StoryService {
       buttons: [
         {
           text: 'Make the Switch',
-          handler: (user) => {
+          handler: () => {
             if (this.user['currency'] >= 25) {
               this.navCtrl.navigateForward('win')
             } else {

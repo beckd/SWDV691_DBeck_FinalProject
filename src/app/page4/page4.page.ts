@@ -25,8 +25,8 @@ export class Page4Page implements OnInit {
   title = "You're nearing the border of Couchtopia and Living Roomopolis. But instead of excitement you feel a sense of unease.";
   story = "Something doesn't seem quite right. You pause to look around, when suddenly... ";
 
-  villain1(user) {
-    this.villainService.villain_1_Story1(user);
+  villain1() {
+    this.villainService.villain_1_Story1();
   }
   async restartGame() {
     const alert = await this.alertController.create({
