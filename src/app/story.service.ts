@@ -582,7 +582,7 @@ export class StoryService {
         {
           text: 'Make the Switch',
           handler: () => {
-            if (this.user['currency'] >= 25) {
+            if (this.user['currency'] >= 15) {
               this.navCtrl.navigateForward('win')
             } else {
               this.navCtrl.navigateForward('lose-final-stage')
