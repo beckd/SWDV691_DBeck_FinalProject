@@ -225,8 +225,8 @@ export class VillainService {
       buttons: [
         {
           text: 'Take A Guess',
-          handler: () => {
-            if (guessNumber == name) {
+          handler: data => {
+            if (guessNumber == data.guess) {
               this.villain_2_Story_Win(guessNumber);
             } else {
               this.villain_2_Story_Guess3(guessNumber)
@@ -250,8 +250,8 @@ export class VillainService {
       buttons: [
         {
           text: 'Take A Guess',
-          handler: () => {
-            if (guessNumber == name) {
+          handler: data => {
+            if (guessNumber == data.guess) {
               this.villain_2_Story_Win(guessNumber);
             } else {
               this.villain_2_Story_Lose(guessNumber)
