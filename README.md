@@ -9,8 +9,8 @@ The game is now fully functional and hosted entirely in the cloud via Heroku. Th
 
 ## Known Issues:
 * The initial load of the game is taking a while, 10-15 seconds on my machine. I'm trying to investigate why, so please be aware.
-* If you refresh the page during the game, the user data is getting lost. It's not erased from the db, it just doesn't remember which user is playing. I'm investigating this issue as well, but to be frank, it seems above my skill level at this point. I'm also reluctant to attempt a fix that might have knock-on effects to any related to user data. I'm still investigating, but more willing to just issue a warning for this issue at this time.
-* Not optimized for smaller browser sizes and mobile. I received feedback regarding this, and it's completely valid. As this is an MVP I feel inclined to leave this issue for know, though I don't believe I have enough time left to properly make the code changes needed and test. 
+* If you refresh the page during the game, the user data is getting lost. It's not erased from the db, it just doesn't remember which user is playing. I'm investigating this issue as well, but to be frank, it seems above my skill level at this point. I'm also reluctant to attempt a fix that might have knock-on effects to anything related to user data. I'm still investigating, but more willing to just issue a warning for this issue at this time.
+* Not optimized for smaller browser sizes and mobile. I received feedback regarding this, and it's completely valid. As this is an MVP I feel inclined to leave this issue for know, as I don't believe I have enough time left to properly make the code changes needed and to test them out. 
 
  ## A Text-Based Adventure
 This project will build on a previous project from all the way back in SWDV 600. In that class we built a TBA using only Python. I want to go back and revisit this project, adding to it all the things I've learned since then. I want to translate this single file game into a fully fledged game that is hosted and accessible to the public.
