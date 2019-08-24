@@ -82,6 +82,7 @@ export class VillainService {
 
   async villain_1_Story_Flip() {
     var coinFlip = Math.floor(Math.random() * 2)
+    console.log('coin flip = ', coinFlip)
     var heads = 0
     var tails = 1
     const alert = await this.alertController.create({
