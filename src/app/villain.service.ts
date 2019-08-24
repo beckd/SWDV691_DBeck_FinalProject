@@ -93,6 +93,7 @@ export class VillainService {
           text: 'Tails',
           handler: () => {
             if (coinFlip == tails) {
+              console.log('coin flip and tails ', coinFlip, tails)
               this.villain_1_Flip_Win()
             } else {
               this.villain_1_Flip_Lose()
@@ -103,6 +104,7 @@ export class VillainService {
           text: 'Heads',
           handler: () => {
             if (coinFlip == heads) {
+              console.log('coin flip and heads ', coinFlip, heads)
               this.villain_1_Flip_Win()
             } else {
               this.villain_1_Flip_Lose()
@@ -115,6 +117,7 @@ export class VillainService {
   }
 
   async villain_1_Flip_Win() {
+    console.log('Made it to Flip Win')
     const alert = await this.alertController.create ({
       header: "You've won!",
       subHeader: "'Drat!' the brute exclaims. 'Should've used a rigged coin! But a win is a win.' He tosses 5 Pickles Chips at your feet as the group retreats back into the shadows.",
@@ -140,6 +143,7 @@ export class VillainService {
   }
 
   async villain_1_Flip_Lose() {
+    console.log('Made it to Flip Lose')
     const alert = await this.alertController.create({
       header: "You've lost!",
       subHeader: "'HAHA!' the brute exclaims. 'I'm unbeatable! Hand over my winnings!' You toss 10 Pickle Chips toward him and run as fast as you can till their laughter is only faintly heard.",
