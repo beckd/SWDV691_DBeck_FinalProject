@@ -82,7 +82,7 @@ app.delete('/api/users/:id', function (req, res) {
             console.error("Error deleting user ", err);
         }
         else {
-            res.send({ success: 'User deleted!' })
+            res.send({ success: 'User deleted!', user })
         }
     });
 });
