@@ -83,17 +83,15 @@ export class VillainService {
   async villain_1_Story_Flip() {
     var coinFlip = Math.floor(Math.random() * 2)
     console.log('coin flip = ', coinFlip)
-    var heads = 0
-    var tails = 1
     const alert = await this.alertController.create({
       header: "Watching the leader casually flip the coin over and over, you decide 50/50 is pretty good odds. And besides, what are all these smallish brutes gonna do anyway?",
       subHeader: "'I'll take my chances with the coin.' you say in a confindent voice. 'Your funeral. Pick a side.' He says showing you both sides.",
       buttons: [
         {
           text: 'Tails',
-          handler: () => {
-            console.log('coin flip and tails ', coinFlip, tails)
-            if (coinFlip == tails) {
+          handler: data => {
+            console.log('coin flip and tails ', coinFlip)
+            if (coinFlip == 1) {
               this.villain_1_Flip_Win()
             } else {
               this.villain_1_Flip_Lose()
@@ -103,8 +101,8 @@ export class VillainService {
         {
           text: 'Heads',
           handler: () => {
-            console.log('coin flip and heads ', coinFlip, heads)
-            if (coinFlip == heads) {
+            console.log('coin flip and heads ', coinFlip)
+            if (coinFlip == 0) {
               this.villain_1_Flip_Win()
             } else {
               this.villain_1_Flip_Lose()
