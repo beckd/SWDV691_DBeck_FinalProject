@@ -92,8 +92,8 @@ export class VillainService {
         {
           text: 'Tails',
           handler: () => {
+            console.log('coin flip and tails ', coinFlip, tails)
             if (coinFlip == tails) {
-              console.log('coin flip and tails ', coinFlip, tails)
               this.villain_1_Flip_Win()
             } else {
               this.villain_1_Flip_Lose()
@@ -103,8 +103,8 @@ export class VillainService {
         {
           text: 'Heads',
           handler: () => {
+            console.log('coin flip and heads ', coinFlip, heads)
             if (coinFlip == heads) {
-              console.log('coin flip and heads ', coinFlip, heads)
               this.villain_1_Flip_Win()
             } else {
               this.villain_1_Flip_Lose()
